@@ -4,6 +4,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'lil-gui'
 import { SpotLight } from 'three'
 
+window.addEventListener('dblclick', () => {
+    if (!document.fullscreenElement) {
+        canvas.requestFullscreen()
+    } else {
+        document.exitFullscreen()
+    }
+})
+
 /**
  * Base
  */
